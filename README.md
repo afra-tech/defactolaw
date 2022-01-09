@@ -1,1 +1,1 @@
-# DefactoLaw - An Open Source Contractual Language Understanding Application Using Machine Learning.
+# DefactoLaw - An Open Source Contractual Language Understanding Application Using Machine Learning
