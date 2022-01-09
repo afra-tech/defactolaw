@@ -1,0 +1,143 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+  <title>My Website</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>D</span>e <span>f</span>acto <span>L</span>aw</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Service">Get Started</a></li>
+            <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>AI Legal <span></span></h1>
+        <h1>Contract Review <span></span></h1>
+        <h1>Your contract is safe in our hands<span></span></h1>
+        <a href="#services" type="button" class="cta">Start My Document Review</a>
+        
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section  -->
+
+  <!-- Service Section -->
+  <section id="services">
+    <div class="services container">
+      <div class="service-top">
+        <h1 class="section-title">START YOUR <span>CONTRACT REViEW</span> PROCESS</h1>
+        <p>Upload a PDF File of  your Contract. If your file is scanned and non-searchable i.e. you are unable to copy text from the PDF, please tick the scanned checkbox.</p>
+          <div class="uploadtxt">Upload your Document</div>
+        <p style="color: crimson">{{ error }}</p>
+          <form method="post"  enctype="multipart/form-data" action="{% url 'pdfview' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+                <button class='cta' type="submit">View</button>
+            </form>
+        
+      </div>
+  </section>
+  <!-- End Service Section -->
+
+  
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img src="{% static  './img/backgroung.jpg' %}" alt="img">
+        </div>
+      </div>
+      <div class="col-right">
+        <h1 class="section-title">About <span>DE FACTO LAW</span></h1>
+        <p> DE FACTO LAW is a State of the Art Contract Review System built by leveraging Deep Learning and the latest and largest open source Contracts dataset.
+          Contracts are reviewed by our SOTA model tuned dilligently over months to give reliable results. Our web app is free and Open Source to contribute to the sparse Legal AI field.</p>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact container">
+      <div>
+        <h1 class="section-title">Contact <span>US</span></h1>
+      </div>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/ios-filled/50/fa314a/apple-phone.png"/></div>
+          <div class="contact-info">
+            <h1>Phone</h1>
+            <h2>Email for Phone</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/ios-filled/50/fa314a/email-open.png"/></div>
+          <div class="contact-info">
+            <h1>Email</h1>
+            <h2>cse499polymorphs
+              @gmail.com</h2>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>D</span>e <span>f</span>acto <span>L</span>aw</h1>
+      </div>
+      <h2>Have Your Contract Reviewed by the AI Attorney</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/fluent/48/fa314a/facebook-new.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/color/48/fa314a/instagram-new.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/color/48/fa314a/twitter.png"/></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script src="{% static 'app.js' %}"></script>
+</body>
+
+</html>

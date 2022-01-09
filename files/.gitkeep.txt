@@ -1,0 +1,4 @@
+# The * line tells git to ignore all files in the folder
+*
+# !.gitignore tells git to still include the .gitignore file.
+!.gitkeep
