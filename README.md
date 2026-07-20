@@ -73,22 +73,19 @@ defactolaw/
 
 ```bibtex
 @inproceedings{nawar-etal-2022-open,
-    title = "An Open Source Contractual Language Understanding Application Using Machine Learning",
-    author = "Nawar, Afra  and
-      Rakib, Mohammed  and
-      Hai, Salma Abdul  and
-      Haq, Sanaulla",
-    editor = "Adebayo, Kolawole  and
-      Nanda, Rohan  and
-      Verma, Kanishk  and
-      Davis, Brian",
-    booktitle = "Proceedings of the First Workshop on Language Technology and Resources for a Fair, Inclusive, and Safe Society within the 13th Language Resources and Evaluation Conference",
-    month = jun,
-    year = "2022",
-    address = "Marseille, France",
-    publisher = "European Language Resources Association",
-    url = "https://aclanthology.org/2022.lateraisse-1.6/",
-    pages = "42--50"
+   title = "An Open Source Contractual Language Understanding Application Using Machine Learning",
+   author = "Nawar, Afra  and
+     Rakib, Mohammed  and
+     Hai, Salma Abdul  and
+     Haq, Sanaulla",
+   booktitle = "Proceedings of the First Workshop on Language Technology and Resources for a Fair, Inclusive, and Safe Society within the 13th Language Resources and Evaluation Conference",
+   month = jun,
+   year = "2022",
+   address = "Marseille, France",
+   publisher = "European Language Resources Association",
+   url = "https://aclanthology.org/2022.lateraisse-1.6",
+   pages = "42--50",
+   abstract = "Legal field is characterized by its exclusivity and non-transparency. Despite the frequency and relevance of legal dealings, legal documents like contracts remains elusive to non-legal professionals for the copious usage of legal jargon. There has been little advancement in making legal contracts more comprehensible. This paper presents how Machine Learning and NLP can be applied to solve this problem, further considering the challenges of applying ML to the high length of contract documents and training in a low resource environment. The largest open-source contract dataset so far, the Contract Understanding Atticus Dataset (CUAD) is utilized. Various pre-processing experiments and hyperparameter tuning have been carried out and we successfully managed to eclipse SOTA results presented for models in the CUAD dataset trained on RoBERTa-base. Our model, A-type-RoBERTa-base achieved an AUPR score of 46.6{\%} compared to 42.6{\%} on the original RoBERT-base. This model is utilized in our end to end contract understanding application which is able to take a contract and highlight the clauses a user is looking to find along with it{'}s descriptions to aid due diligence before signing. Alongside digital, i.e. searchable, contracts the system is capable of processing scanned, i.e. non-searchable, contracts using tesseract OCR. This application is aimed to not only make contract review a comprehensible process to non-legal professionals, but also to help lawyers and attorneys more efficiently review contracts.",
 }
 ```
 
